@@ -22,7 +22,7 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "GROUPS")
+@Table(name = "`GROUPS`")
 public class Group {
 
     @Id
