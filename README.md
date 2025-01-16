@@ -19,16 +19,23 @@ escalável.
 - **Spring Boot Starter Validation**: Implementa validações nos dados enviados e recebidos.
 - **Spring Boot Starter Web**: Fornece suporte a web para construir a interface RESTful.
 - **H2 Database**: Um banco de dados em memória leve utilizado para desenvolvimento.
+- **Flyway**: Ferramenta para gerenciamento de migrações de banco de dados
+- **MySQL** : Banco de dados relacional
 - **MySQL Connector**: Conector para se conectar ao banco de dados MySQL em tempo de execução.
 - **Lombok**: Para reduzir o boilerplate code e melhorar a legibilidade do código.
 - **OpenAPI Swagger**: Ferramenta para geração de documentação automática da API.
 - **Mockito**: Utilizado para testes unitários.
 - **Spring Boot Starter Test**: Fornece os pacotes necessários para os testes da aplicação.
+- **Docker**: Contêinerização da aplicação
 
 ## Configurações de Ambiente
 
 - **Java Version**: 21
 - **IDE**: Eclipse, IntelliJ ou outro suporte ao Spring Boot
+
+## Pré-requisitos
+- **Docker**: Você precisa ter o [Docker](https://www.docker.com/get-started) instalado em sua máquina para rodar a aplicação e o banco de dados em contêineres.
+- **Docker Compose**: Necessário para orquestrar múltiplos contêineres de uma vez. O [Docker Compose](https://docs.docker.com/compose/install/) é usado para definir os serviços no ambiente Docker.
 
 ## Dependências do Projeto
 
@@ -37,13 +44,11 @@ validação, banco de dados, documentação da API e testes.
 
 ## Como Executar
 
-1. Certifique-se de ter o Java 21 instalado.
-2. Clone o repositório do projeto.
-3. Configure o banco de dados H2/MySQL conforme necessário.
-4. Execute a aplicação utilizando o Maven:
+1. Clone o repositório do projeto.
+2. Execute a aplicação utilizando o docker-compose:
 
 ```console
-   mvn spring-boot:run
+   docker-compose up --build
 ```
 
 ## Documentação
