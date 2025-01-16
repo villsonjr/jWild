@@ -19,11 +19,14 @@ escalável.
 - **Spring Boot Starter Validation**: Implementa validações nos dados enviados e recebidos.
 - **Spring Boot Starter Web**: Fornece suporte a web para construir a interface RESTful.
 - **H2 Database**: Um banco de dados em memória leve utilizado para desenvolvimento.
+- **Flyway**: Ferramenta para gerenciamento de migrações de banco de dados [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
+- **MySQL** : Banco de dados relacional [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
 - **MySQL Connector**: Conector para se conectar ao banco de dados MySQL em tempo de execução.
 - **Lombok**: Para reduzir o boilerplate code e melhorar a legibilidade do código.
 - **OpenAPI Swagger**: Ferramenta para geração de documentação automática da API.
 - **Mockito**: Utilizado para testes unitários.
 - **Spring Boot Starter Test**: Fornece os pacotes necessários para os testes da aplicação.
+- **Docker**: Contêinerização da aplicação  [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
 
 ## Configurações de Ambiente
 
