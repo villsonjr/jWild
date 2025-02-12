@@ -10,7 +10,11 @@ import lombok.NoArgsConstructor;
 public enum StatusEnum {
 
     ACTIVE("ACTIVE"),
-    INACTIVE("INACTIVE");
+    INACTIVE("INACTIVE"),
+
+    CREDENTIALS_EXPIRED("CREDENTIALS_EXPIRED"),
+    EXPIRED("EXPIRED"),
+    BLOCKED("BLOCKED");
 
     private String description;
 }

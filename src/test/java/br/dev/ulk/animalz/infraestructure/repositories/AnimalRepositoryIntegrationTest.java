@@ -5,34 +5,28 @@ import br.dev.ulk.animalz.domain.models.Animal;
 import br.dev.ulk.animalz.domain.models.Group;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
-public class AnimalRepositoryTest {
+@SpringBootTest
+public class AnimalRepositoryIntegrationTest {
 
-    @Mock
+    @Autowired
     private AnimalRepository animalRepository;
-    @Mock
+
+    @Autowired
     private GroupRepository groupRepository;
 
-    private Animal animal;
     private Group group;
+    private Animal animal;
 
     @BeforeEach
     public void setUp() {
@@ -54,22 +48,31 @@ public class AnimalRepositoryTest {
     }
 
     @Test
-    void findAnimalsByGroupId() {
-        when(animalRepository.findAnimalsByGroupId(anyLong())).thenReturn(Arrays.asList(animal));
-        List<Animal> result = animalRepository.findAnimalsByGroupId(1L);
-        assertNotNull(result);
-        assertEquals(1, result.size());
-        assertEquals("Panthera leo", result.get(0).getScientificName());
-        verify(animalRepository, times(1)).findAnimalsByGroupId(anyLong());
+    @Transactional
+    public void testSaveAnimalWithValidGroup() {
+        Animal savedAnimal = animalRepository.save(animal);
+        assertNotNull(savedAnimal);
+        assertNotNull(savedAnimal.getId());
+        assertEquals("Panthera leo", savedAnimal.getScientificName());
+        assertEquals("Mammals", savedAnimal.getGroup().getName());
     }
 
     @Test
-    void findByGroupNameIgnoreCase() {
-        when(animalRepository.findByGroupNameIgnoreCase(anyString())).thenReturn(Arrays.asList(animal));
+    public void testFindAnimalsByGroupId() {
+        animalRepository.save(animal);
+        List<Animal> result = animalRepository.findAnimalsByGroupId(group.getId());
+        assertNotNull(result);
+        assertFalse(result.isEmpty());
+        assertEquals("Panthera leo", result.get(0).getScientificName());
+    }
+
+    @Test
+    @Transactional
+    public void testFindByGroupNameIgnoreCase() {
+        animalRepository.save(animal);
         List<Animal> result = animalRepository.findByGroupNameIgnoreCase("mammals");
         assertNotNull(result);
-        assertEquals(1, result.size());
+        assertFalse(result.isEmpty());
         assertEquals("Panthera leo", result.get(0).getScientificName());
-        verify(animalRepository, times(1)).findByGroupNameIgnoreCase(anyString());
     }
 }

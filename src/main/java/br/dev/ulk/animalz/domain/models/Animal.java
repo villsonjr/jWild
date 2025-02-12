@@ -1,18 +1,13 @@
 package br.dev.ulk.animalz.domain.models;
 
-
 import br.dev.ulk.animalz.domain.enumerations.StatusEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,35 +21,31 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "ANIMALS")
-public class Animal {
+public class Animal extends AbstractEntity {
 
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @NotNull
-    @Column(name = "SCIENTIFIC_NAME")
+    @Column(name = "SCIENTIFIC_NAME",
+            nullable = false)
     private String scientificName;
 
-    @NotNull
-    @Column(name = "SPECIE")
+    @Column(name = "SPECIE",
+            nullable = false)
     private String specie;
 
-    @NotNull
-    @Column(name = "SIZE")
+    @Column(name = "SIZE",
+            nullable = false)
     private Double size;
 
-    @NotNull
-    @Column(name = "MASS")
+    @Column(name = "MASS",
+            nullable = false)
     private Double mass;
 
-    @NotNull
-    @Column(name = "STATUS")
+    @Column(name = "STATUS",
+            nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
 
     @ManyToOne
     @JoinColumn(name = "GROUP_ID")
     private Group group;
+
 }

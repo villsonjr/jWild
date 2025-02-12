@@ -1,4 +1,4 @@
-package br.dev.ulk.animalz.application.dtos;
+package br.dev.ulk.animalz.application.v1.payloads.dtos;
 
 import br.dev.ulk.animalz.domain.models.Group;
 import io.swagger.v3.oas.annotations.media.Schema;
