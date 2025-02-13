@@ -18,6 +18,8 @@ escalável.
 - **Spring Boot Starter HATEOAS**: Facilita a construção de APIs RESTful com ligações entre recursos.
 - **Spring Boot Starter Validation**: Implementa validações nos dados enviados e recebidos.
 - **Spring Boot Starter Web**: Fornece suporte a web para construir a interface RESTful.
+- **Spring Boot Starter Security**: Suporte a autenticação e segurança na aplicação.
+- **JSON Web Tokens (JWT)**: Implementação de tokens JWT para autenticação e autorização.
 - **H2 Database**: Um banco de dados em memória leve utilizado para desenvolvimento.
 - **Flyway**: Ferramenta para gerenciamento de migrações de banco de dados
 - **MySQL** : Banco de dados relacional
