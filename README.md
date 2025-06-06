@@ -1,6 +1,6 @@
-# ulk-aniamlz
+# jWild
 
-**Ulk-aniamlz** é uma API RESTful desenvolvida com Spring Boot para registro e gerenciamento de registros de animais.
+**jWild** é uma API RESTful desenvolvida com Spring Boot para registro e gerenciamento de registros de animais.
 Este projeto utiliza tecnologias modernas e práticas de desenvolvimento ágil para proporcionar uma solução eficiente e
 escalável.
 
