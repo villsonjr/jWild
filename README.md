@@ -1,6 +1,6 @@
-# ulk-aniamlz
+# jWild
 
-**Ulk-aniamlz** é uma API RESTful desenvolvida com Spring Boot para registro e gerenciamento de registros de animais.
+**jWild** é uma API RESTful desenvolvida com Spring Boot para registro e gerenciamento de registros de animais.
 Este projeto utiliza tecnologias modernas e práticas de desenvolvimento ágil para proporcionar uma solução eficiente e
 escalável.
 
@@ -19,22 +19,22 @@ escalável.
 - **Spring Boot Starter Validation**: Implementa validações nos dados enviados e recebidos.
 - **Spring Boot Starter Web**: Fornece suporte a web para construir a interface RESTful.
 - **Spring Boot Starter Security**: Suporte a autenticação e segurança na
-  aplicação. [[spring-security]](https://github.com/villson-junior/ulk-animalz/tree/feature/spring-security)
+  aplicação. [[spring-security]](https://github.com/villson-junior/jWild/tree/feature/spring-security)
 - **JSON Web Tokens (JWT)**: Implementação de tokens JWT para autenticação e
-  autorização. [[spring-security]](https://github.com/villson-junior/ulk-animalz/tree/feature/spring-security)
+  autorização. [[spring-security]](https://github.com/villson-junior/jWild/tree/feature/spring-security)
 - **H2 Database**: Um banco de dados em memória leve utilizado para
-  desenvolvimento.  [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
+  desenvolvimento.  [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/jWild/tree/feature/docker-with-mysql-and-flyway)
 - **Flyway**: Ferramenta para gerenciamento de migrações de banco de
-  dados [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
+  dados [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/jWild/tree/feature/docker-with-mysql-and-flyway)
 - **MySQL** : Banco de dados
-  relacional [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
+  relacional [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/jWild/tree/feature/docker-with-mysql-and-flyway)
 - **MySQL Connector**: Conector para se conectar ao banco de dados MySQL em tempo de execução.
 - **Lombok**: Para reduzir o boilerplate code e melhorar a legibilidade do código.
 - **OpenAPI Swagger**: Ferramenta para geração de documentação automática da API.
 - **Mockito**: Utilizado para testes unitários.
 - **Spring Boot Starter Test**: Fornece os pacotes necessários para os testes da aplicação.
 - **Docker**: Contêinerização da
-  aplicação  [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/ulk-animalz/tree/feature/docker-with-mysql-and-flyway)
+  aplicação  [[docker-with-mysql-and-flyway]](https://github.com/villson-junior/jWild/tree/feature/docker-with-mysql-and-flyway)
 
 ## Configurações de Ambiente
 
